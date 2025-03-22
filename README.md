@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Simple TODO App
 
-## Getting Started
+これは [Next.js](https://nextjs.org) を使用して作成されたシンプルなTODOアプリです。このプロジェクトは [Claude Desktop](https://www.anthropic.com/claude) と Claude Code MCPを利用して作成されました。
 
-First, run the development server:
+## 機能
+
+- タスクの追加、削除、完了状態の切り替え
+- 期限の設定
+- 優先度（高/中/低）の設定
+- ダークモード/ライトモードの切り替え
+- フィルタリング（すべて/未完了/完了済み）
+- ローカルストレージを使ったデータの永続化
+
+## 技術スタック
+
+- [Next.js](https://nextjs.org) - Reactフレームワーク
+- [TypeScript](https://www.typescriptlang.org/) - 型付きJavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - CSSフレームワーク
+
+## 開発方法
+
+開発サーバーを起動します：
 
 ```bash
 npm run dev
-# or
+# または
 yarn dev
-# or
+# または
 pnpm dev
-# or
+# または
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000) をブラウザで開くとアプリが表示されます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`src/app/components/TodoApp.tsx` を編集することでアプリの機能を変更できます。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## About Claude
 
-## Learn More
+このアプリは [Anthropic](https://www.anthropic.com/) の大規模言語モデル「Claude」を使用して作成されました。Claude は自然な会話を通じてコーディング、デザイン、問題解決をサポートする AI アシスタントです。
 
-To learn more about Next.js, take a look at the following resources:
+- [Claude Desktop](https://www.anthropic.com/claude) - デスクトップアプリケーション
+- Claude Code MCP - コード生成と開発をサポートする機能
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ライセンス
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](https://choosealicense.com/licenses/mit/)
