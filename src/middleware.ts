@@ -17,10 +17,10 @@ export function middleware(request: NextRequest) {
       const [user, password] = atob(authValue).split(':');
 
       // 環境変数から認証情報を取得
-      const basicAuthUser = process.env.BASIC_AUTH_USER || 'test';
-      const basicAuthPassword = process.env.BASIC_AUTH_PASSWORD || '##test!!';
+      const basicAuthUser = process.env.BASIC_AUTH_USER;
+      const basicAuthPassword = process.env.BASIC_AUTH_PASSWORD;
       
-      if (user === basicAuthUser && password === basicAuthPassword) {
+      if (basicAuthUser && basicAuthPassword && user === basicAuthUser && password === basicAuthPassword) {
         return NextResponse.next();
       }
     }
