@@ -380,7 +380,7 @@ export default function TodoApp() {
                 onKeyPress={handleKeyPress}
               />
               <button
-                className="px-4 py-2 bg-primary text-primary-foreground rounded-r hover:bg-primary-hover transition"
+                className="px-4 py-2 bg-primary text-primary-foreground rounded-r hover:bg-primary-hover cursor-pointer transition-all duration-300 ease-in-out"
                 onClick={addTodo}
                 disabled={loading}
               >
@@ -416,7 +416,7 @@ export default function TodoApp() {
                   currentFilter === 'all' 
                     ? 'bg-primary text-primary-foreground'
                     : 'bg-secondary text-secondary-foreground hover:bg-secondary-hover'
-                } transition`}
+                } cursor-pointer transition-all duration-300 ease-in-out`}
                 onClick={() => setCurrentFilter('all')}
               >
                 すべて
@@ -426,7 +426,7 @@ export default function TodoApp() {
                   currentFilter === 'active' 
                     ? 'bg-primary text-primary-foreground'
                     : 'bg-secondary text-secondary-foreground hover:bg-secondary-hover'
-                } transition`}
+                } cursor-pointer transition-all duration-300 ease-in-out`}
                 onClick={() => setCurrentFilter('active')}
               >
                 未完了
@@ -436,7 +436,7 @@ export default function TodoApp() {
                   currentFilter === 'completed' 
                     ? 'bg-primary text-primary-foreground'
                     : 'bg-secondary text-secondary-foreground hover:bg-secondary-hover'
-                } transition`}
+                } cursor-pointer transition-all duration-300 ease-in-out`}
                 onClick={() => setCurrentFilter('completed')}
               >
                 完了済み
@@ -494,7 +494,7 @@ export default function TodoApp() {
                       </div>
                       <button
                         onClick={() => deleteTodo(todo.id)}
-                        className="ml-2 p-1 text-danger hover:text-danger-hover transition-colors rounded-full hover:bg-secondary"
+                        className="ml-2 p-1 text-danger hover:text-danger-hover cursor-pointer transition-all duration-300 ease-in-out rounded-full hover:bg-secondary"
                         aria-label="タスクを削除"
                         disabled={loading}
                       >
@@ -514,7 +514,7 @@ export default function TodoApp() {
             {todos.some(todo => todo.completed) && (
               <button
                 onClick={clearCompleted}
-                className="px-3 py-1 text-secondary-foreground hover:text-foreground hover:bg-secondary rounded transition-colors"
+                className="px-3 py-1 text-secondary-foreground hover:text-foreground hover:bg-secondary cursor-pointer transition-all duration-300 ease-in-out rounded"
                 disabled={loading}
               >
                 完了したタスクを削除
@@ -527,7 +527,7 @@ export default function TodoApp() {
             <div className="mt-8 text-center">
               <button
                 onClick={() => supabase.auth.signOut()}
-                className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary-hover transition"
+                className="px-4 py-2 text-sm bg-secondary text-secondary-foreground rounded hover:bg-secondary-hover cursor-pointer transition-all duration-300 ease-in-out"
               >
                 ログアウト
               </button>
